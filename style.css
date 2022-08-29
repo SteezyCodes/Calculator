@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background: linear-gradient(135deg, #002412 0%, #dab055 0%, #6e28a3 100%);
+  overflow: hidden;
+  color: #eaeaea;
+  margin: 0;
+}
+body .grid-section {
+  display: grid;
+  justify-content: center;
+  gap: 2px;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(6, 80px);
+}
+body .grid-section .span-two {
+  grid-column: span 2;
+}
+body .grid-section .output-holder {
+  grid-column: -1/1;
+  background-color: #0d0d0f;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+body .grid-section .output-holder p {
+  width: 100%;
+  text-align: end;
+  padding-right: 1rem;
+  font-size: 2rem;
+}
+body .grid-section button {
+  height: 80px;
+  outline: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+body .grid-section button:hover {
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

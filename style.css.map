@@ -1,0 +1,8 @@
+{
+    "version": 3,
+    "sourceRoot": "",
+    "sources": ["style.scss"],
+    "names": [],
+    "mappings": "AAIQ;AAOR;EACE;;;AAGF;EACE;EAMA;EACA,OAfM;EAgBN;;AACA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EACE;;AAEF;EACE;EACA;EACA;EACA;EACA;;AACA;EACE;EACA;EACA;EACA;;AAGJ;EACE;EACA;EACA;EACA;EACA;EACA,kBA/CE;;AAgDF;EACE,kBAjDA",
+    "file": "style.css"
+}
