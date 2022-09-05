@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
 * {
   font-family: "Roboto Mono", monospace;
 }
@@ -9,6 +10,7 @@ body {
   color: #eaeaea;
   margin: 0;
 }
+
 body .grid-section {
   display: grid;
   justify-content: center;
@@ -19,9 +21,11 @@ body .grid-section {
   grid-template-columns: repeat(4, 80px);
   grid-template-rows: repeat(6, 80px);
 }
+
 body .grid-section .span-two {
   grid-column: span 2;
 }
+
 body .grid-section .output-holder {
   grid-column: -1/1;
   background-color: #0d0d0f;
@@ -29,12 +33,14 @@ body .grid-section .output-holder {
   display: flex;
   align-items: center;
 }
+
 body .grid-section .output-holder p {
   width: 100%;
   text-align: end;
   padding-right: 1rem;
   font-size: 2rem;
 }
+
 body .grid-section button {
   height: 80px;
   outline: none;
@@ -43,6 +49,7 @@ body .grid-section button {
   border: none;
   background-color: #fff;
 }
+
 body .grid-section button:hover {
   background-color: #fff;
 }
