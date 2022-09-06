@@ -18,7 +18,7 @@ buttons.forEach((button) => {
       output.shift();
     }
   };
-  button.addEventListener("click", handleButton());
+  button.addEventListener("click", handleButton);
 });
 
 const handleDelete = () => {
@@ -52,20 +52,19 @@ const handleSubtract = () => {
 const handleEquals = () => {
   output = output.join("");
   output = output.toString("");
-  console.log(typeof output);
-  console.log(output);
   answer = eval(output);
-  console.log(answer);
-  answer = answer.toString().split("");
-  output = answer.map(Number);
+  output = answer.toString().split("");
   blockMultipleMathSigns = false;
+  if (output[0] === "-") {
+    output[0] = " - ";
+}
 };
 
-deleteButton.addEventListener("click", handleDelete());
-clearButton.addEventListener("click", handleClear());
-addButton.addEventListener("click", handleAdd());
-subtractButton.addEventListener("click", handleSubtract());
-solveButton.addEventListener("click", handleEquals());
+deleteButton.addEventListener("click", handleDelete);
+clearButton.addEventListener("click", handleClear);
+addButton.addEventListener("click", handleAdd);
+subtractButton.addEventListener("click", handleSubtract);
+solveButton.addEventListener("click", handleEquals);
 
 setInterval(() => {
   screenOutput.textContent = output.join("");

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
-
 * {
   font-family: "Roboto Mono", monospace;
 }
@@ -12,14 +11,22 @@ body {
 }
 
 body .grid-section {
+  display: -ms-grid;
   display: grid;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 2px;
-  align-items: center;
-  align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   min-height: 100vh;
-  grid-template-columns: repeat(4, 80px);
-  grid-template-rows: repeat(6, 80px);
+  -ms-grid-columns: (80px)[4];
+      grid-template-columns: repeat(4, 80px);
+  -ms-grid-rows: (80px)[6];
+      grid-template-rows: repeat(6, 80px);
 }
 
 body .grid-section .span-two {
@@ -27,11 +34,15 @@ body .grid-section .span-two {
 }
 
 body .grid-section .output-holder {
-  grid-column: -1/1;
+  grid-column: -1 / 1;
   background-color: #0d0d0f;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .grid-section .output-holder p {
@@ -39,6 +50,7 @@ body .grid-section .output-holder p {
   text-align: end;
   padding-right: 1rem;
   font-size: 2rem;
+  word-spacing: -10px;
 }
 
 body .grid-section button {
@@ -53,5 +65,4 @@ body .grid-section button {
 body .grid-section button:hover {
   background-color: #fff;
 }
-
 /*# sourceMappingURL=style.css.map */
