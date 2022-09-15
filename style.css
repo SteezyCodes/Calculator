@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 * {
   font-family: "Roboto Mono", monospace;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -46,22 +48,50 @@ body .grid-section .span-two {
 }
 
 body .grid-section .output-holder {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   background-color: #0d0d0f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   grid-column: -1 / 1;
-  height: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-inline: 15px;
 }
 
-body .grid-section .output-holder p {
+body .grid-section .output-holder::after {
+  content: "";
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(to right, #0d0d0f 15px, transparent);
+  left: 0;
+  position: absolute;
+}
+
+body .grid-section .output-holder .top-output {
+  word-spacing: -6px;
+  opacity: .8;
+  margin-bottom: 5px;
+}
+
+body .grid-section .output-holder .output {
   font-size: 2rem;
-  padding-right: 1rem;
-  text-align: end;
-  width: 100%;
+  overflow: hidden;
+  text-align: right;
   word-spacing: -10px;
 }
 

@@ -11,6 +11,7 @@ $white: #fff;
 
 * {
   font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
 }
 
 body {
@@ -41,16 +42,34 @@ body {
       grid-column: span 2;
     }
     .output-holder {
-      align-items: center;
-      background-color: darken($bg, 7);
+      align-items: flex-end;
+      background-color: #0d0d0f;
       display: flex;
       grid-column: -1 / 1;
-      height: 80px;
-      p {
+      flex-direction: column;
+      height: 90px;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+      padding-inline: 15px;
+      &::after {
+        content: "";
+        width: 40px;
+        height: 100%;
+      background: linear-gradient(to right, #0d0d0f 15px, transparent);
+      left: 0;
+        position: absolute;
+      }
+      .top-output {
+        word-spacing: -6px;
+        opacity: .8;
+        margin-bottom: 5px;
+      }
+      .output {
         font-size: 2rem;
-        padding-right: 1rem;
-        text-align: end;
-        width: 100%;
+        overflow: hidden;
+        text-align: right;
         word-spacing: -10px;
       }
     }
